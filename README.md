@@ -40,11 +40,11 @@ To get a local copy up and running follow these simple steps:
 
 1. **Clone the repo**:
    ```sh
-   git clone https://github.com/your_username/expenses-tracker-app.git
+   git clone https://github.com/azix-khan/Expense-Tracker.git
 
 2. **Navigate to project directory**:
    ```sh
-   cd expenses-tracker-app
+   cd expense-tracker-app
 
 3. **Install dependencies**:
    ```sh
