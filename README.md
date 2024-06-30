@@ -1,16 +1,67 @@
-# expenses_tracker
+# Expenses Tracker App
 
-A new Flutter project.
+A Daily Expenses Tracker App built from scratch using Flutter, Bloc, and Firebase.
 
-## Getting Started
+## 🚀 Features
 
-This project is a starting point for a Flutter application.
+- **Beautiful Design**: Crafted with attention to detail using packages like FontAwesome, fl_chart, and CupertinoIcons.
+- **State Management**: Utilizes Bloc for efficient and manageable state handling.
+- **Backend Integration**: Powered by Firebase for robust and scalable backend functionality.
+- **Local Data Handling**: Currently using a local data file for design completion.
 
-A few resources to get you started if this is your first Flutter project:
+## 🛠️ Technology Stack
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Flutter**: For a seamless cross-platform mobile app experience.
+- **Bloc**: State management to ensure performance and readability.
+- **Firebase**: Backend services for real-time database, authentication, and more.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📦 Packages Used
+
+- `fontawesome_flutter`: For beautiful icons.
+- `fl_chart`: For stunning charts and graphs.
+- `cupertino_icons`: For native iOS icons.
+
+## 📈 Roadmap
+
+1. **Design Completion**: 🎨 Done!
+2. **Backend Integration**: 🔧 In Progress
+3. **Testing and Optimization**: 🧪 Next
+4. **Deployment**: 🚀 Soon
+
+## 🖼️ Screenshots
+
+![1](https://github.com/azix-khan/Expense-Tracker/assets/138978130/701e2a57-a6af-4a75-889e-5a594e86f357)
+
+Design from Dribble: https://dribbble.com/shots/15560984-Daily-Expense-Tracker/attachments/7344374?mode=media
+
+## 🔍 Getting Started
+
+To get a local copy up and running follow these simple steps:
+
+1. **Clone the repo**:
+   ```sh
+   git clone https://github.com/azix-khan/Expense-Tracker.git
+
+2. **Navigate to project directory**:
+   ```sh
+   cd expense-tracker-app
+
+3. **Install dependencies**:
+   ```sh
+   flutter pub get
+4. **Run the app**:
+   ```sh
+   flutter run
+
+# Contributing 🤝
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
+
+1. Fork the Project
+2. Create your Feature Branch (git checkout -b feature/AmazingFeature)
+3. Commit your Changes (git commit -m 'Add some AmazingFeature')
+4. Push to the Branch (git push origin feature/AmazingFeature)
+5. Open a Pull Request
+
+## License
+
+Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
