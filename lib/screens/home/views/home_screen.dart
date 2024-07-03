@@ -10,6 +10,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../add_expense/blocs/create_expense_bloc/create_expense_bloc.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -71,6 +73,10 @@ class _HomeScreenState extends State<HomeScreen> {
                           BlocProvider(
                             create: (context) =>
                                 CreateCategoryBloc(FirebaseExpenseRepo()),
+                          ),
+                          BlocProvider(
+                            create: (context) =>
+                                CreateExpenseBloc(FirebaseExpenseRepo()),
                           ),
                           BlocProvider(
                             create: (context) =>
