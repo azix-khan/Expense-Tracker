@@ -71,6 +71,7 @@ class _AddExpenseState extends State<AddExpense> {
                         child: TextFormField(
                           controller: expenseController,
                           textAlignVertical: TextAlignVertical.center,
+                          keyboardType: TextInputType.number,
                           decoration: InputDecoration(
                             filled: true,
                             fillColor: Colors.white,
