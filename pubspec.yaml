@@ -21,6 +21,10 @@ dependencies:
   fl_chart: ^0.68.0
   intl: ^0.19.0
   flutter_colorpicker: ^1.1.0
+  firebase_core: ^2.32.0
+  bloc: ^8.1.4
+  flutter_bloc: ^8.1.6
+  equatable: ^2.0.5
 
   expense_repository:
     path: packages/expense_repository
