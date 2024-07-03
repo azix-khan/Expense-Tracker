@@ -2,8 +2,6 @@ import 'dart:developer';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:expense_repository/expense_repository.dart';
-import 'package:expense_repository/src/entities/category_entity.dart';
-import 'package:expense_repository/src/models/category.dart';
 
 class FirebaseExpenseRepo implements ExpenseRepository {
   final categoryColllecion =
@@ -22,7 +20,7 @@ class FirebaseExpenseRepo implements ExpenseRepository {
   }
 
   @override
-  Future<void> getCategory() async {
+  Future<List<Category>> getCategory() async {
     try {
       return await categoryColllecion.get().then((value) => value.docs
           .map(

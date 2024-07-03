@@ -73,7 +73,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                 CreateCategoryBloc(FirebaseExpenseRepo()),
                           ),
                           BlocProvider(
-                            create: (context) => GetCategoriesBloc(),
+                            create: (context) =>
+                                GetCategoriesBloc(FirebaseExpenseRepo())
+                                  ..add(GetCategories()),
                           ),
                         ],
                         child: const AddExpense(),
