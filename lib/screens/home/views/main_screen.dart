@@ -251,94 +251,93 @@ class MainScreen extends StatelessWidget {
               height: 20,
             ),
             Expanded(
-                child: ListView.builder(
-                    itemCount: expenses.length,
-                    itemBuilder: (context, int i) {
-                      return Padding(
-                        padding: const EdgeInsets.only(bottom: 16.0),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(16.0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              child: ListView.builder(
+                itemCount: expenses.length,
+                itemBuilder: (context, int i) {
+                  return Padding(
+                    padding: const EdgeInsets.only(bottom: 16.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
                               children: [
-                                Row(
+                                Stack(
+                                  alignment: Alignment.center,
                                   children: [
-                                    Stack(
-                                      alignment: Alignment.center,
-                                      children: [
-                                        Container(
-                                          width: 50,
-                                          height: 50,
-                                          decoration: BoxDecoration(
-                                            color: Color(
-                                                expenses[i].category.color),
-                                            shape: BoxShape.circle,
-                                          ),
-                                        ),
-                                        Image.asset(
-                                          'assets/${expenses[i].category.icon}.png',
-                                          scale: 2,
-                                          color: Colors.white,
-                                        ),
-                                        // transactionsData[i]['icon'],
-                                        // Icon(
-                                        //   // transactionsData[i]['icon'],
-                                        //   // color: Colors.white,
-                                        // ),
-                                      ],
-                                    ),
-                                    const SizedBox(
-                                      width: 12,
-                                    ),
-                                    Text(
-                                      expenses[i].category.name,
-                                      style: TextStyle(
-                                        fontSize: 14,
-                                        color: Theme.of(context)
-                                            .colorScheme
-                                            .onSurface,
-                                        fontWeight: FontWeight.w500,
+                                    Container(
+                                      width: 50,
+                                      height: 50,
+                                      decoration: BoxDecoration(
+                                        color:
+                                            Color(expenses[i].category.color),
+                                        shape: BoxShape.circle,
                                       ),
                                     ),
+                                    Image.asset(
+                                      'assets/${expenses[i].category.icon}.png',
+                                      scale: 2,
+                                      color: Colors.white,
+                                    ),
+                                    // transactionsData[i]['icon'],
+                                    // Icon(
+                                    //   // transactionsData[i]['icon'],
+                                    //   // color: Colors.white,
+                                    // ),
                                   ],
                                 ),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.end,
-                                  children: [
-                                    Text(
-                                      "\$${expenses[i].amount}.00",
-                                      style: TextStyle(
-                                        fontSize: 14,
-                                        color: Theme.of(context)
-                                            .colorScheme
-                                            .onSurface,
-                                        fontWeight: FontWeight.w500,
-                                      ),
-                                    ),
-                                    Text(
-                                      DateFormat('dd/MM/yyyy')
-                                          .format(expenses[i].date),
-                                      style: TextStyle(
-                                        fontSize: 14,
-                                        color: Theme.of(context)
-                                            .colorScheme
-                                            .outline,
-                                        fontWeight: FontWeight.w400,
-                                      ),
-                                    ),
-                                  ],
-                                )
+                                const SizedBox(
+                                  width: 12,
+                                ),
+                                Text(
+                                  expenses[i].category.name,
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    color:
+                                        Theme.of(context).colorScheme.onSurface,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
                               ],
                             ),
-                          ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.end,
+                              children: [
+                                Text(
+                                  "\$${expenses[i].amount}.00",
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    color:
+                                        Theme.of(context).colorScheme.onSurface,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                                Text(
+                                  DateFormat('dd/MM/yyyy')
+                                      .format(expenses[i].date),
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    color:
+                                        Theme.of(context).colorScheme.outline,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                ),
+                              ],
+                            )
+                          ],
                         ),
-                      );
-                    }))
+                      ),
+                    ),
+                  );
+                },
+              ),
+            )
           ],
         ),
       ),

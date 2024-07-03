@@ -69,28 +69,35 @@ class _HomeScreenState extends State<HomeScreen> {
               FloatingActionButtonLocation.centerDocked,
           floatingActionButton: FloatingActionButton(
             shape: const CircleBorder(),
-            onPressed: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => MultiBlocProvider(
-                            providers: [
-                              BlocProvider(
-                                create: (context) =>
-                                    CreateCategoryBloc(FirebaseExpenseRepo()),
-                              ),
-                              BlocProvider(
-                                create: (context) =>
-                                    CreateExpenseBloc(FirebaseExpenseRepo()),
-                              ),
-                              BlocProvider(
-                                create: (context) =>
-                                    GetCategoriesBloc(FirebaseExpenseRepo())
-                                      ..add(GetCategories()),
-                              ),
-                            ],
-                            child: const AddExpense(),
-                          )));
+            onPressed: () async {
+              var newExpense = await Navigator.push(
+                context,
+                MaterialPageRoute<Expense>(
+                  builder: (context) => MultiBlocProvider(
+                    providers: [
+                      BlocProvider(
+                        create: (context) =>
+                            CreateCategoryBloc(FirebaseExpenseRepo()),
+                      ),
+                      BlocProvider(
+                        create: (context) =>
+                            CreateExpenseBloc(FirebaseExpenseRepo()),
+                      ),
+                      BlocProvider(
+                        create: (context) =>
+                            GetCategoriesBloc(FirebaseExpenseRepo())
+                              ..add(GetCategories()),
+                      ),
+                    ],
+                    child: const AddExpense(),
+                  ),
+                ),
+              );
+              if (newExpense != null) {
+                setState(() {
+                  state.expenses.insert(0, newExpense);
+                });
+              }
             },
             child: Container(
               width: 60,
