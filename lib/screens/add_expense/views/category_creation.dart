@@ -187,7 +187,7 @@ Future getCategoryCreation(BuildContext context) {
                                               ),
                                             ),
                                             onPressed: () {
-                                              print(categoryColor);
+                                              // print(categoryColor);
                                               Navigator.pop(ctx2);
                                             },
                                             child: const Text(
