@@ -4,10 +4,9 @@ A Daily Expenses Tracker App built from scratch using Flutter, Bloc, and Firebas
 
 ## 🚀 Features
 
-- **Beautiful Design**: Crafted with attention to detail using packages like FontAwesome, fl_chart, and CupertinoIcons.
+- **Beautiful Design**: Crafted with attention to detail using different packages.
 - **State Management**: Utilizes Bloc for efficient and manageable state handling.
 - **Backend Integration**: Powered by Firebase for robust and scalable backend functionality.
-- **Local Data Handling**: Currently using a local data file for design completion.
 
 ## 🛠️ Technology Stack
 
@@ -19,13 +18,20 @@ A Daily Expenses Tracker App built from scratch using Flutter, Bloc, and Firebas
 
 - `fontawesome_flutter`: For beautiful icons.
 - `fl_chart`: For stunning charts and graphs.
-- `cupertino_icons`: For native iOS icons.
+- `intl`: For internationalization and localization.
+- `flutter_colorpicker`: For providing color picker widgets.
+- `firebase_core`: For initializing and configuring Firebase in the app.
+- `bloc`: For implementing the Bloc pattern for state management.
+- `flutter_bloc`: For integrating Bloc with Flutter widgets.
+- `equatable`: For simplifying equality comparisons.
+- `uuid`: For generating unique identifiers.
+- `expense_repository`: Custom package for managing expense data.
 
 ## 📈 Roadmap
 
 1. **Design Completion**: 🎨 Done!
-2. **Backend Integration**: 🔧 In Progress
-3. **Testing and Optimization**: 🧪 Next
+2. **Backend Integration with firebase**: 🔧 Done!
+3. **Testing and Optimization**: 🧪 Done!
 4. **Deployment**: 🚀 Soon
 
 ## 🖼️ Screenshots
