@@ -1,6 +1,6 @@
 # Expenses Tracker App
 
-A Daily Expenses Tracker App built from scratch using Flutter, Bloc, and Firebase.
+A Daily Expenses Tracker App built using Flutter, Bloc, and Firebase.
 
 ## 🚀 Features
 
