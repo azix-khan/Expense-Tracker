@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:redacted/redacted.dart';
 
 class MyChart extends StatefulWidget {
   const MyChart({super.key});
@@ -15,7 +16,7 @@ class _MyChartState extends State<MyChart> {
   Widget build(BuildContext context) {
     return BarChart(
       mainBarData(),
-    );
+    ).redacted(context: context, redact: true);
   }
 
   BarChartGroupData makeGroupData(int x, double y) {
