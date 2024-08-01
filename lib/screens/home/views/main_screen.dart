@@ -9,8 +9,18 @@ class MainScreen extends StatelessWidget {
   final List<Expense> expenses;
   const MainScreen(this.expenses, {super.key});
 
+  // to show total expenses balance
+  double _calculateTotalExpenses(List<Expense> expenses) {
+    double total = 0;
+    for (var expense in expenses) {
+      total += expense.amount;
+    }
+    return total;
+  }
+
   @override
   Widget build(BuildContext context) {
+    final totalExpenses = _calculateTotalExpenses(expenses);
     return SafeArea(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 25.0, vertical: 10.0),
@@ -108,9 +118,9 @@ class MainScreen extends StatelessWidget {
                   const SizedBox(
                     height: 12,
                   ),
-                  const Text(
-                    '\$ 40,000.00',
-                    style: TextStyle(
+                  Text(
+                    '\$${totalExpenses.toStringAsFixed(2)}',
+                    style: const TextStyle(
                       fontSize: 40,
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
@@ -121,7 +131,9 @@ class MainScreen extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(
-                        vertical: 12, horizontal: 20),
+                      vertical: 12,
+                      horizontal: 20,
+                    ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -210,7 +222,7 @@ class MainScreen extends StatelessWidget {
                                   ),
                                 ),
                               ],
-                            )
+                            ),
                           ],
                         )
                       ],
@@ -329,7 +341,7 @@ class MainScreen extends StatelessWidget {
                                   ),
                                 ),
                               ],
-                            )
+                            ),
                           ],
                         ),
                       ),
@@ -337,7 +349,7 @@ class MainScreen extends StatelessWidget {
                   );
                 },
               ),
-            )
+            ),
           ],
         ),
       ),

@@ -81,8 +81,9 @@ class _AddExpenseState extends State<AddExpense> {
                               color: Colors.grey,
                             ),
                             border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(30),
-                                borderSide: BorderSide.none),
+                              borderRadius: BorderRadius.circular(30),
+                              borderSide: BorderSide.none,
+                            ),
                           ),
                         ),
                       ),
@@ -124,9 +125,11 @@ class _AddExpenseState extends State<AddExpense> {
                               )),
                           hintText: 'Category',
                           border: const OutlineInputBorder(
-                              borderRadius: BorderRadius.vertical(
-                                  top: Radius.circular(12)),
-                              borderSide: BorderSide.none),
+                            borderRadius: BorderRadius.vertical(
+                              top: Radius.circular(12),
+                            ),
+                            borderSide: BorderSide.none,
+                          ),
                         ),
                       ),
                       Container(
@@ -135,7 +138,8 @@ class _AddExpenseState extends State<AddExpense> {
                         decoration: const BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.vertical(
-                              bottom: Radius.circular(12)),
+                            bottom: Radius.circular(12),
+                          ),
                         ),
                         child: Padding(
                             padding: const EdgeInsets.all(8.0),
@@ -160,8 +164,8 @@ class _AddExpenseState extends State<AddExpense> {
                                       tileColor:
                                           Color(state.categories[i].color),
                                       shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(8)),
+                                        borderRadius: BorderRadius.circular(8),
+                                      ),
                                     ),
                                   );
                                 })),
@@ -224,14 +228,17 @@ class _AddExpenseState extends State<AddExpense> {
                                       .add(CreateExpense(expense));
                                 },
                                 style: TextButton.styleFrom(
-                                    backgroundColor: Colors.black,
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(12))),
+                                  backgroundColor: Colors.black,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                ),
                                 child: const Text(
                                   'Save',
                                   style: TextStyle(
-                                      fontSize: 22, color: Colors.white),
+                                    fontSize: 22,
+                                    color: Colors.white,
+                                  ),
                                 )),
                       )
                     ],
