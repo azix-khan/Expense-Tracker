@@ -26,6 +26,7 @@ A Daily Expenses Tracker App built using Flutter, Bloc, and Firebase.
 - `equatable`: For simplifying equality comparisons.
 - `uuid`: For generating unique identifiers.
 - `expense_repository`: Custom package for managing expense data.
+- - `redacted`: automatically generate a loading widget from your own widget.
 
 ## 📈 Roadmap
 
